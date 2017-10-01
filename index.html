@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Scratch It!</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/main.css">
+    <script src="src/main.js"></script>
+    <script src="src/imageSource.js"></script>
+</head>
+<body>
+
+<div class="scratch-wrapper">
+    <div class="scratch-header">Random Image</div>
+    <div class="scratch-content">
+        <img id="mainImage" src="http://lorempixel.com/1000/700" alt="Random Image">
+    </div>
+    <div class="scratch-footer">
+        <button type="button" class="btn btn-primary">Prev</button>
+        <button type="button" class="btn btn-primary" onclick="next()">Next</button>
+    </div>
+</div>
+
+<script>
+	var imageService = imageSourceFabric();
+    function next() {
+		mainImage.src = imageService.next();
+	}
+</script>
+
+</body>
+</html>
